@@ -1,4 +1,4 @@
-
+"use strict";
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 9
@@ -13,6 +13,21 @@
    student union.
 
 */
+//sets date and sets it to local time
+var thisDate = new Date("October 12, 2018");
+var dateString = thisDate.toLocaleString();
+
+var dateHTML = "<h2>" + dateString + "</h2>";//This is the where the date will be stored between the <h2></h2>
+
+//Gets the day from the whole date method
+var thisDay = thisDate.getDay();
+
+//this will get the event on that day from new date
+var eventHTML = getEvent(thisDay);
+
+//Shows date and event on the website
+document.getElementById("unionToday").insertAdjacentHTML('beforeEnd', dateHTML + eventHTML);
+
 
 
 
